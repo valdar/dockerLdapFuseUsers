@@ -1,0 +1,60 @@
+dn: ou=People,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: People
+
+dn: ou=Groups,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: Groups
+
+dn: uid=fuseldap,ou=People,dc=example,dc=org
+changetype: add
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Tammy Something
+uid: fuseldap
+uidNumber: 3000
+gidNumber: 3000
+homeDirectory: /home/fuseldap
+loginShell: /bin/bash
+gecos: Tammy Something,Karate Instructor,Room 37A,435-555-555,801-555-555
+userPassword: {crypt}x
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0
+
+dn: uid=notfuseldap,ou=People,dc=example,dc=org
+changetype: add
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Tammy Something
+uid: fuseldap
+uidNumber: 3001
+gidNumber: 3001
+homeDirectory: /home/notfuseldap
+loginShell: /bin/bash
+gecos: Tammy Something,Karate Instructor,Room 37A,435-555-555,801-555-555
+userPassword: {crypt}x
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0
+
+dn: cn=admin,ou=Groups,dc=example,dc=org
+changetype: add
+objectClass: top
+objectClass: posixGroup
+cn: admin
+userPassword: {crypt}x
+gidNumber: 3000
+
+dn: cn=admin,ou=Groups,dc=example,dc=org
+changetype: modify
+add: memberuid
+memberuid: fuseldap
