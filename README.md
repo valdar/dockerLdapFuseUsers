@@ -21,7 +21,7 @@ This start a new container with a OpenLDAP server running inside and with some p
 
 ## Tests
 
-We use **Bats** (Bash Automated Testing System) to test this image:
+I use **Bats** (Bash Automated Testing System) to test this image:
 
 > [https://github.com/sstephenson/bats](https://github.com/sstephenson/bats)
 

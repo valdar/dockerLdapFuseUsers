@@ -34,8 +34,8 @@ objectClass: top
 objectClass: account
 objectClass: posixAccount
 objectClass: shadowAccount
-cn: Tammy Something
-uid: fuseldap
+cn: Tammy Something2
+uid: notfuseldap
 uidNumber: 3001
 gidNumber: 3001
 homeDirectory: /home/notfuseldap
